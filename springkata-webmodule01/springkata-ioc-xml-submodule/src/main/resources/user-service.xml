@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--
+    Attr
+    id 对象名
+    class 全类名
+    bean构造流程
+    1. 通过clazz获取无参构造器，然后调用构造器的newInstance()
+    2. 底层会调用setAccess方法将搜索到的构造器设定为可访问
+    3. 因此，使用bean要求类必须具备无参构造器
+-->
+    <bean id="userService" class="sirsiiaa.webkata.java.service.UserService"></bean>
+
+</beans>
