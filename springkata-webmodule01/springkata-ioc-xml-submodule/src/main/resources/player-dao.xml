@@ -13,6 +13,13 @@
         <property name="id" value="100"/>
         <property name="name" value="SIR.SIIAA"/>
         <property name="roles" ref="rolesSet"/>
+    <!--
+        内部bean，不需要name
+        内部bean无法通过上下文getBean获得
+    -->
+        <property name="service">
+            <bean class="sirsiiaa.webkata.java.service.UserService"/>
+        </property>
     </bean>
 
     <bean id="rolesSet" class="java.util.HashSet"/>
