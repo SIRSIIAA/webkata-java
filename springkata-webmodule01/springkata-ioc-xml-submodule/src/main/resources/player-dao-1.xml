@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--
+        通过在bean标签中嵌入<property/>标签的形式，为对象的字段赋值
+        这要求字段必须配置了Getter以及Setter方法，当字段过多时，会导致Bean膨胀
+        name 字段名
+        value 基本类型值
+        ref 引用
+    -->
+    <bean id="player1" class="sirsiiaa.webkata.java.dao.PlayerDAO">
+        <property name="id" value="100"/>
+        <property name="name" value="SIR.SIIAA"/>
+        <property name="roles" ref="rolesSet"/>
+    </bean>
+
+    <bean id="rolesSet" class="java.util.HashSet"/>
+
+</beans>

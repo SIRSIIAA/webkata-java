@@ -11,6 +11,6 @@
     2. 底层会调用setAccess方法将搜索到的构造器设定为可访问
     3. 因此，使用bean要求类必须具备无参构造器
 -->
-    <bean id="userService" class="sirsiiaa.webkata.java.service.UserService"></bean>
+    <bean id="userService" class="sirsiiaa.webkata.java.service.UserService"/>
 
 </beans>
