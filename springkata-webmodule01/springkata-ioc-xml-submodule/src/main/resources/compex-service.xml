@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--
+        此处id分配给getObject返回的Bean对象
+        相应的FactoryBean对象也会被IoC容器纳管，id为 &{id}
+        如下，对应的FactoryBean对象名为 &complexService
+    -->
+    <bean id="complexService" class="sirsiiaa.webkata.java.service.servicefactorybean.ComplexServiceFactoryBean">
+        <!--此处调用FactoryBean的setter方法        -->
+        <property name="name" value="SIIAA"/>
+        <property name="id" value="100"/>
+    </bean>
+</beans>

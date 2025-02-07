@@ -4,7 +4,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import sirsiiaa.webkata.java.service.AbstractUserService;
 import sirsiiaa.webkata.java.service.CommonService;
+import sirsiiaa.webkata.java.service.ComplexService;
 import sirsiiaa.webkata.java.service.UserService;
+import sirsiiaa.webkata.java.service.servicefactorybean.ComplexServiceFactoryBean;
 
 public class ServiceTest {
     @Test
@@ -80,5 +82,16 @@ public class ServiceTest {
         var service = context.getBean(UserService.class);
 
         System.out.println(service.getServiceName());
+    }
+
+    @Test
+    public void test03() {
+        var config = "complex-service.xml";
+        var context = new ClassPathXmlApplicationContext(config);
+        var complexService = context.getBean(ComplexService.class);
+        System.out.println(complexService);
+        var complexServiceFactoryBean = context.getBean(ComplexServiceFactoryBean.class);
+        var complexServiceFactoryBean1 = context.getBean("&complexService");
+        System.out.println(complexServiceFactoryBean);
     }
 }
