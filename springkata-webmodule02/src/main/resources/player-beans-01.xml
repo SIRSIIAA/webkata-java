@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+    <!--
+        1. 精准扫描包
+    -->
+<!-- <context:component-scan base-package="sirsiiaa.webkata.java.beans"/>-->
+
+    <!--
+        1. 通过子标签配置排除某些注解标记的类
+        2. context:component-scan 的 use-default-filters 默认为 true，将导入包中的全部
+        3. 若使用context:include-filter 自定义导入规则，需要关闭默认过滤规则，否则不会生效，仍将全部导入
+    -->
+    <context:component-scan base-package="sirsiiaa.webkata.java">
+        <!-- 忽略包中以Service修饰的所有类      -->
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+    </context:component-scan>
+
+    <!-- 引入配置文件    -->
+    <context:property-placeholder location="player.properties"/>
+</beans>
