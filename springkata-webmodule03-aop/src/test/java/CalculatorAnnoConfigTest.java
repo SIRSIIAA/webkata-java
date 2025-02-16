@@ -11,6 +11,6 @@ public class CalculatorAnnoConfigTest {
 
     @Test
     public void test() {
-        System.out.println(calculator.add(1, 2));
+        System.out.println(calculator.div(1, 0));
     }
 }

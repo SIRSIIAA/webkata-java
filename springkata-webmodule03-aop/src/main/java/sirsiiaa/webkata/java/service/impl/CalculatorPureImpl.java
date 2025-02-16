@@ -1,9 +1,9 @@
 package sirsiiaa.webkata.java.service.impl;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import sirsiiaa.webkata.java.service.Calculator;
 
-@Component
+@Service
 public class CalculatorPureImpl implements Calculator {
 
     @Override
