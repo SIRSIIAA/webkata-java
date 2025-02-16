@@ -36,12 +36,14 @@ public class CommonService implements CreatureService {
 //    }
 
     @Autowired
-    @Qualifier("playerBean")
-    private Creature creature; // NPCBean的单例id为npc，名称命中，不会产生异常
+//    @Qualifier("playerBean")
+//    private Creature creature;
+    // NPCBean的单例id为npc，名称命中，不会产生异常
+    private Creature npc;
 
     @Override
     public String getName() {
-        return creature.getName();
+        return npc.getName();
     }
 
     @Override

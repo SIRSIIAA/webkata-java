@@ -11,4 +11,17 @@ import sirsiiaa.webkata.java.service.PlayerService;
 public class PlayerController {
     private PlayerService playerService;
     private PlayerBean playerBean;
+
+    public PlayerController() {
+    }
+
+    public PlayerController(PlayerService playerService, PlayerBean playerBean) {
+        this.playerService = playerService;
+        this.playerBean = playerBean;
+    }
+
+    public void play() {
+        System.out.println(playerBean.getName());
+        playerService.active();
+    }
 }

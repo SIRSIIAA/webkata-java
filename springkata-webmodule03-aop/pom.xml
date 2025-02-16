@@ -9,37 +9,40 @@
         <version>0.1.0</version>
     </parent>
 
-    <artifactId>springkata-webmodule02</artifactId>
+    <artifactId>springkata-webmodule03-aop</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
     <dependencies>
+        <!-- IOC 核心容器，CGLIB包含在spring-core中        -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>6.0.6</version>
             <scope>compile</scope>
         </dependency>
+        <!-- JUnit测试        -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>5.3.1</version>
+            <version>5.8.1</version>
             <scope>test</scope>
         </dependency>
+        <!-- SpringTest，简化JUnit的使用        -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
             <version>6.0.6</version>
-            <scope>test</scope>
         </dependency>
+        <!-- SpringAOP核心，依赖了aspectj        -->
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>1.2.15</version>
-            <scope>compile</scope>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>6.0.6</version>
         </dependency>
     </dependencies>
 
