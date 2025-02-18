@@ -33,8 +33,9 @@ public class CalculatorPureImpl implements Calculator {
     @Override
     public int div(int i, int j) {
 
+        System.out.println("enter div");
         int result = i / j;
-
+        System.out.println("after calculate");
         return result;
     }
 }

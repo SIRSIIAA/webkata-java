@@ -19,15 +19,15 @@ public class LogAspect {
     /*
      * step 3
      * 在切面中定义方法，最多4个
-     * AOP框架会在将业务代码和切面方法组合成如下形式，使用如下四个注解标记四个切入点
+     * AOP框架会将业务代码和切面方法组合成如下形式，使用如下四个注解标记四个切入点
      * try
-     *  -- point 1 前置 @Before
+     *  -- point 1 前置 @Before 进入方法之前
      *  service code
-     *  -- point 2 返回 @AfterReturning
+     *  -- point 2 返回 @AfterReturning 方法正常返回之后
      * catch
-     *  -- point 3 异常 @AfterThrowing
+     *  -- point 3 异常 @AfterThrowing 方法抛出异常行
      *  finally
-     *  -- point 4 后置 @After
+     *  -- point 4 后置 @After 方法执行完毕
      */
 
     /*
@@ -63,9 +63,22 @@ public class LogAspect {
         System.out.println("exception");
     }
 
-    @After("execution(* sirsiiaa..impl.*.*(..))")
+    /*
+     * 在切面中可以调用用于引入@Pointcut的方法，实现重用
+     */
+    @After("pointcut()")
     public void afterReturning() {
         System.out.println("after");
+    }
+
+    /*
+     * 1. 提供一个无参数无返回值方法，用以引入@Pointcut注解，来实现切点表达式的重用
+     * 2. 切点表达式可以跨类引用，在方法前添加全类名即可
+     * 3. 也因2，可以使用一个类将所有的@Pointcut修饰方法封装，该类不需要@Aspects标记，仅使用@Component修饰即可，因为该类不是一个切面类
+     */
+    @Pointcut("execution(* sirsiiaa..impl.*.*(..))")
+    public void pointcut() {
+
     }
 
 }
