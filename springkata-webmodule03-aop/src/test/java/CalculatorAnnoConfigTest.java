@@ -13,4 +13,13 @@ public class CalculatorAnnoConfigTest {
     public void test() {
         System.out.println(calculator.div(1, 0));
     }
+
+    @Test
+    public void test2() {
+        try {
+            System.out.println(calculator.mul(10,10));
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

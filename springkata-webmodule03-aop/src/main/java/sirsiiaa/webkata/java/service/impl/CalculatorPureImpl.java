@@ -23,9 +23,10 @@ public class CalculatorPureImpl implements Calculator {
     }
 
     @Override
-    public int mul(int i, int j) {
+    public int mul(int i, int j) throws InterruptedException {
 
         int result = i * j;
+        Thread.sleep(100);
 
         return result;
     }

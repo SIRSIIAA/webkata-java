@@ -6,7 +6,7 @@ public interface Calculator {
 
     int sub(int i, int j);
 
-    int mul(int i, int j);
+    int mul(int i, int j) throws InterruptedException;
 
     int div(int i, int j);
 
