@@ -4,6 +4,7 @@ import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 /*
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Aspect
+@Order(10)
 public class TXAspect {
     @Before("execution(* sirsiiaa..impl.*.*(..))")
     public void begin() {

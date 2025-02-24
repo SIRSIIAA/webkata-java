@@ -2,6 +2,7 @@ package sirsiiaa.webkata.java.service.aspects;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Modifier;
@@ -15,6 +16,10 @@ import java.util.Arrays;
  * step 2 标记此类为一个切面
  */
 @Aspect
+/*
+ * step 3 可选的，标记当前切面的优先级，value的值越小，执行优先级越高，可以理解为执行次序
+ */
+@Order(value = 100)
 public class LogAspect {
     /*
      * step 3
