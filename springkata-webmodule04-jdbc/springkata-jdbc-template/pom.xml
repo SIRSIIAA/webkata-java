@@ -9,7 +9,7 @@
         <version>0.1.0</version>
     </parent>
 
-    <artifactId>spring-jdbc-template</artifactId>
+    <artifactId>springkata-jdbc-template</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

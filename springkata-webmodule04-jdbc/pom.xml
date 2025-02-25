@@ -11,8 +11,9 @@
 
     <packaging>pom</packaging>
     <modules>
-        <module>spring-jdbc-template</module>
+        <module>springkata-jdbc-template</module>
     </modules>
+
 
     <artifactId>springkata-webmodule04-jdbc</artifactId>
 
