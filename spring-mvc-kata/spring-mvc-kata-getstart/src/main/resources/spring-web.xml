@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 <!--
-    此处主要使用注解+xml形式完成配置
+        Step2 配置mapper以及adapter
+        此处主要使用注解+xml形式完成配置
 -->
 <!--    Controller-->
+<!--    M1 手动引入需要的mapper和adapter-->
 <!--    handlerMapper-->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
 <!--    handlerAdapter-->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"/>
+<!--    M2 若什么都不写，在spring-webmvc的dispatcherServlet.properties中配置了默认值，会自动引入3个mapper、4个adapter-->
+
+
+<!--    Step3 配置包扫描-->
+    <context:component-scan base-package="sirsiiaa.webkata.java.controller"/>
 </beans>

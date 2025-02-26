@@ -12,6 +12,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>spring-mvc-kata-getstart</module>
+        <module>spring-mvc-kata-req-mapping</module>
     </modules>
 
     <artifactId>spring-mvc-kata</artifactId>

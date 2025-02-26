@@ -3,27 +3,18 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
 	version="4.0">
-	<!-- Step1 在web.xml中配置servlet及其mapper	-->
-	<!-- 由于DispatcherServlet是三方类，只能通过在web.xml中的操作配置拦截全部请求	-->
 	<servlet>
 		<servlet-name>ds</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<!--
-			1. IoC容器由SpringMVC托管创建，因此需要指定配置文件的位置
-			2. 参照Servlet的生命周期，在dispatcherServlet的init()方法中执行对IoC容器的创建工作
-			3. 默认读取/WEB-INF/{ds-name}-servlet.xml，其中ds-name是指定的DispatcherServlet实例的名称
-		-->
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>classpath:spring-web.xml</param-value>
 		</init-param>
-		<!-- 推荐对servlet执行提前启动		-->
 		<load-on-startup>6</load-on-startup>
 	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>ds</servlet-name>
-		<!-- 使用ds拦截全部请求		-->
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 </web-app>
