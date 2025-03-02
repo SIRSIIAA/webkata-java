@@ -14,6 +14,7 @@
         <module>spring-mvc-kata-getstart</module>
         <module>spring-mvc-kata-req-mapping</module>
         <module>spring-mvc-kata-json-resp</module>
+        <module>spring-mvc-kata-params</module>
     </modules>
 
     <artifactId>spring-mvc-kata</artifactId>
@@ -55,12 +56,14 @@
             <version>6.0.6</version>
         </dependency>
 
+        <!-- 导入JSON解析相关依赖       -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>2.17.0</version>
         </dependency>
 
+        <!-- 导入lombok，简化Getter、Setter、构造函数的创建  -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

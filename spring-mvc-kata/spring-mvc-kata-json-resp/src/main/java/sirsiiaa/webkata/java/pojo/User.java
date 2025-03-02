@@ -2,10 +2,15 @@ package sirsiiaa.webkata.java.pojo;
 
 import lombok.Data;
 
-@Data
+/*
+ * 使用@ToString自动生成toString方法
+ */
+@Data // 等同于getter、setter、toString、无参构造函数
 public class User {
     /*
      * 使用lombok可以简化getter、setter的操作
+     * @Getter标记字段以自动生成getter方法
+     * @Setter标记字段以自动生成setter方法
      */
     private String name;
     private Integer age;

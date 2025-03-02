@@ -1,7 +1,7 @@
 package sirsiiaa.webkata.java;
 
 /*
- * spring mvc Restful接口
+ * spring mvc参数处理
  */
 public class Main {
     public static void main(String[] args) {

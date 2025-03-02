@@ -15,6 +15,7 @@
         <module>springkata-webmodule03-aop</module>
         <module>springkata-webmodule04-jdbc</module>
         <module>spring-mvc-kata</module>
+        <module>spring-mvc-kata/spring-mvc-kata-params</module>
     </modules>
 
     <properties>

@@ -78,4 +78,10 @@ public class PathController {
         System.out.println("list reached");
         return "user list";
     }
+
+    /*
+     * RequestMapping 存在4个子注解
+     * RequestMapping(method = RequestMethod.GET)
+     * PostMapping、GetMapping、PullMapping、DeleteMapping，此4个子注解只能修饰方法
+     */
 }
